@@ -3,30 +3,37 @@
 
 <head>
   <title>Chat App Socket.io</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <div id="username"></div>
+
+  <div class="main">
+    <div class="text text1">
+        <ul id="messages"></ul>
+        <form id="chat-form">
+          <input id="input-message" autocomplete="off" />
+          <button>Send to everyone</button>
+        </form>
+    </div>
+    
+    <div class="text">
+      <ul id="room-messages"></ul>
+
+      <form id="joinRoomForm">
+        <input type="text" id="roomInput" placeholder="Enter room name">
+        <button type="submit">Join Room</button>
+      </form>
+    
+    
+      <form id="room-chat-form">
+        <!-- <input id="room-input-message" autocomplete="off" />
+        <button>Send to everyone</button> -->
+      </form>
+    </div>
+  </div>
   
-  <ul id="messages"></ul>
-  <form id="chat-form">
-    <input id="input-message" autocomplete="off" />
-    <button>Send to everyone</button>
-  </form>
-  
-  <p></p>
-
-  <form id="joinRoomForm">
-    <input type="text" id="roomInput" placeholder="Enter room name">
-    <button type="submit">Join Room</button>
-  </form>
-
-
-  <ul id="room-messages"></ul>
-  <form id="room-chat-form">
-    <!-- <input id="room-input-message" autocomplete="off" />
-    <button>Send to everyone</button> -->
-  </form>
   
   <script src="/socket.io/socket.io.js"></script>
   <script src="./main.js"></script>
